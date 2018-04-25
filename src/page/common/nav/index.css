@@ -1,0 +1,22 @@
+.nav{
+    background-color: rgba(238, 238, 238, 0.815);
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid rgb(207, 207, 207)
+}
+.nav .user{
+    float: left;
+}
+.nav .user.login{
+    display: none;
+}
+.nav .user .link{
+    margin-right: 5px;
+}
+.nav .nav-list{
+    float: right;
+}
+.nav .nav-list .nav-item{
+    display: inline-block;
+    margin-left: 5px;
+} 

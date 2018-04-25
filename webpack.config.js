@@ -16,28 +16,36 @@ var config = {
     'login':['./src/page/login/login.js'],
 },
   output: {
-	path: './dist' ,
-	publicPath : '/dist',
-    filename: 'js/[name].js',
+  path: './dist', 
+  filename: 'js/[name].js',
   },
   externals:{
     'jquery':"window.jQuery"
   },
   module: {
-    loaders: [{
-      test: /\.css$/,
-	  loader: Ex.extract('style-loader', 'css-loader'),
-	   // 单独打包出CSS，这里配置注意下
-	},
-	{ test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
-	{ test: /\.string$/, loader: 'html-loader'}]
-  },
+        loaders: [
+            { test: /\.css$/, loader: Ex.extract("style-loader","css-loader",{
+              publicPath:'../'
+          }) },
+            { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
+            { test: /\.string$/, loader: 'html-loader'}
+        ]
+    }, 
+  resolve : {
+        alias : {
+            node_modules    : __dirname + '/node_modules',
+            util            : __dirname + '/src/util',
+            page            : __dirname + '/src/page',
+            service         : __dirname + '/src/service',
+            image           : __dirname + '/src/image'
+        }
+    },
   plugins:[
     new webpack.optimize.CommonsChunkPlugin({
       name:'common',
       filename:'js/base.js'
     }),
-    new Ex("css/[name].css"),
+  new Ex("css/[name].css"),
 	new Html(getConfig('index')),
 	new Html(getConfig('login')),
 
