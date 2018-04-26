@@ -7,7 +7,10 @@
 <body>
 <%= require('html-loader!./layout/nav.html')  %>	
 <%= require('html-loader!./layout/header.html')  %>	
-
+<div class="wrap w">
+	<%= require('html-loader!./layout/nav-side.html')  %>	
+	<div class="content withnav"></div>
+</div>
 <%= require('html-loader!./layout/foot-co.html')  %>		   
 </body>
 </html>

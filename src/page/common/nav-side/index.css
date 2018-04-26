@@ -1,0 +1,23 @@
+/*导航本部*/
+.nav-side{
+    float: left;
+    width: 130px;
+    min-height: 100px;
+}
+.nav-side .nav-item{
+    line-height: 24px;
+    font-size: 14px;
+}
+.nav-side .nav-item .link{
+    color: #888888
+}
+.nav-side .nav-item.active .link{
+    color: #198dcf
+
+}
+/*网页右侧内容*/
+.content.withnav{
+    float: left;
+    width: 950px;
+
+}

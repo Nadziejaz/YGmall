@@ -1,19 +1,21 @@
 var webpack=require('webpack');
 var Ex = require('extract-text-webpack-plugin');
 var Html=require('html-webpack-plugin');
-var getConfig=function(name){
+var getConfig=function(name,title){
 	return{ template:'./src/view/'+name+'.html',
 	filename:'view/'+name+'.html',
-	inject:true,
+  title :title,
+  inject:true,
 	hash:true,
-	chunks:['common',name]}
-}
+	chunks:['common',name]};
+};
 var config = {
   entry: 
   {
     'common':['./src/page/common/index.js'],
     'index':['./src/page/index/index.js'],
     'login':['./src/page/login/login.js'],
+    'result':['./src/page/result/index.js'],
 },
   output: {
   path: './dist', 
@@ -46,8 +48,10 @@ var config = {
       filename:'js/base.js'
     }),
   new Ex("css/[name].css"),
-	new Html(getConfig('index')),
-	new Html(getConfig('login')),
+	new Html(getConfig('index','首页')),
+  new Html(getConfig('login','用户登录')),
+  new Html(getConfig('result','结果页')),
+
 
   ],
 };
