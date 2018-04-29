@@ -9,7 +9,7 @@ var navSide={
         navList:[
            {name:'user-center',desc:'个人中心',href:'./user-center.html'}, 
            {name:'order-list',desc:'我的订单',href:'./order-list.html'}, 
-           {name:'fixpsw',desc:'修改密码',href:'./fixpsw.html'}, 
+           {name:'user-newpsw',desc:'修改密码',href:'./user-newpsw.html'}, 
            {name:'about',desc:'关于YGmall',href:'./about.html'}, 
         ]
     },

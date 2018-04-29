@@ -7,5 +7,6 @@
 .nav-s .logo{
     font-size: 26px;
     font-weight: bold;
-    color:#1c6db8
+    color:#1c6db8;
+    text-decoration: none;
 } 

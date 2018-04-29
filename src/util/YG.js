@@ -38,7 +38,7 @@ var _YG = {
     
     },
     //获取地址
-    getserverUrl :function(path){
+    getServerUrl :function(path){
         return conf.serverHost + path
     },
     //获取url
@@ -62,7 +62,7 @@ var _YG = {
         alert(Msg||"操作失败，请重试！")
     },
     //验证方法(null,mobilphone,email,space)
-    validate:function(value,tyoe){
+    validate:function(value,type){
         //space
         var value=$.trim(value);
         if('require' === type){

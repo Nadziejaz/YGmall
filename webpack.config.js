@@ -1,6 +1,7 @@
 var webpack=require('webpack');
 var Ex = require('extract-text-webpack-plugin');
 var Html=require('html-webpack-plugin');
+
 var getConfig=function(name,title){
 	return{ template:'./src/view/'+name+'.html',
 	filename:'view/'+name+'.html',
@@ -12,10 +13,15 @@ var getConfig=function(name,title){
 var config = {
   entry: 
   {
-    'common':['./src/page/common/index.js'],
-    'index':['./src/page/index/index.js'],
-    'login':['./src/page/login/login.js'],
-    'result':['./src/page/result/index.js'],
+        'common':['./src/page/common/index.js'],
+        'index':['./src/page/index/index.js'],
+        'login':['./src/page/login/login.js'],
+        'user-reg':['./src/page/user-reg/index.js'],
+        'user-fixpsw':['./src/page/user-fixpsw/index.js'],
+        'user-center':['./src/page/user-center/index.js'],
+        'user-center-updata':['./src/page/user-center-updata/index.js'],
+        'user-newpsw':['./src/page/user-newpsw/index.js'],
+        'result':['./src/page/result/index.js'],
 },
   output: {
   path: './dist', 
@@ -50,7 +56,12 @@ var config = {
   new Ex("css/[name].css"),
 	new Html(getConfig('index','首页')),
   new Html(getConfig('login','用户登录')),
-  new Html(getConfig('result','结果页')),
+  new Html(getConfig('result','操作结果')),
+  new Html(getConfig('user-reg','用户注册')),
+  new Html(getConfig('user-fixpsw','修改密码')),
+  new Html(getConfig('user-center','个人中心')),
+  new Html(getConfig('user-center-updata','修改个人信息')),
+  new Html(getConfig('user-newpsw','修改密码')),
 
 
   ],

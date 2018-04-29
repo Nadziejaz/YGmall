@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-co.html')  %>
+		<title><%=htmlWebpackPlugin.options.title%> - 尧哥电商平台，YGmall</title>
+	</head>
+<body>
+<%= require('html-loader!./layout/nav.html')  %>	
+<%= require('html-loader!./layout/header.html')  %>	
+<div class="crumb">
+    <div class="w">
+        <div class="crumb-con">
+            <a href="./index.html" class="link">YGmall>></a>
+            <span></span>
+            <span class="link-text"><%=htmlWebpackPlugin.options.title%></span>
+       </div>
+    </div>
+</div>
+<div class="wrap w">
+	<%= require('html-loader!./layout/nav-side.html')  %>	
+    <div class="content withnav">
+        <div class="panel">
+            <div class="panel-title">个人中心</div>
+            <div class="panel-body">
+                  未加载完成，未知错误
+            </div>
+        </div>
+    </div>
+</div>
+<%= require('html-loader!./layout/foot-co.html')  %>		   
+</body>
+</html>
