@@ -15,6 +15,8 @@ var config = {
   {
         'common':['./src/page/common/index.js'],
         'index':['./src/page/index/index.js'],
+        'list':['./src/page/list/index.js'],
+        'detail':['./src/page/detail/index.js'],
         'login':['./src/page/login/login.js'],
         'user-reg':['./src/page/user-reg/index.js'],
         'user-fixpsw':['./src/page/user-fixpsw/index.js'],
@@ -25,6 +27,7 @@ var config = {
 },
   output: {
   path: './dist', 
+  publicPath:'../',
   filename: 'js/[name].js',
   },
   externals:{
@@ -32,9 +35,8 @@ var config = {
   },
   module: {
         loaders: [
-            { test: /\.css$/, loader: Ex.extract("style-loader","css-loader",{
-              publicPath:'../'
-          }) },
+            { test: /\.css$/, loader: Ex.extract("style-loader","css-loader"
+          ) },
             { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
             { test: /\.string$/, loader: 'html-loader'}
         ]
@@ -62,6 +64,8 @@ var config = {
   new Html(getConfig('user-center','个人中心')),
   new Html(getConfig('user-center-updata','修改个人信息')),
   new Html(getConfig('user-newpsw','修改密码')),
+  new Html(getConfig('list','列表页')),
+  new Html(getConfig('detail','商品详情')),
 
 
   ],
