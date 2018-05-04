@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= require('html-loader!./layout/head-co.html')  %>
+        <title><%= htmlWebpackPlugin.options.title%> - YGmall电商平台</title>
+    </head>
+    <body>
+        <%= require('html-loader!./layout/nav.html')  %>
+        <%= require('html-loader!./layout/header.html')  %>
+        <div class="crumb">
+            <div class="w">
+                <div class="crumb-con">
+                    <a href="./index.html" class="link">YGmall>></a>
+                    <span></span>
+                    <span class="link-text"><%=htmlWebpackPlugin.options.title%></span>
+               </div>
+            </div>
+        </div>
+        <div class="wrap w">
+            <div class="have-wrap">
+                <div class="intro-wrap">
+                    <div class="p-img-con">
+                        <div class="main-img-con">
+                            <img class="main-img" src="https://img12.360buyimg.com/n1/s450x450_jfs/t3298/58/1622979569/120892/64989235/57d0d400Nfd249af4.jpg" alt="iphne 7"/>
+                        </div>
+                        <ul class="p-img-list">
+                            <li class="p-img-item">
+                                <img class="p-img" src="<%=require('../image/floor/floor2-2.jpg')%>" alt="ip7" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-info-con">
+                        <h1 class="p-name">iphone 7</h1>
+                        <p class="p-subtitle">赠送[保障服务][原厂保2年]，获得AppleCare+全方位服务计划，原厂延保售后无忧</p>
+                        <div class="p-info-item p-price-con">
+                            <span class="label">价格:</span>
+                            <span class="info">￥7560</span>
+                        </div>
+                        <div class="p-info-item">
+                            <span class="label">库存:</span>
+                            <span class="info">1</span>
+                        </div>
+                        <div class="p-info-item p-count-con">
+                            <span class="label">数量:</span>
+                            <input class="p-count" value="1" readonly=""/>
+                            <span class="p-count-btn plus">+</span>
+                            <span class="p-count-btn minus">-</span>
+                        </div>
+                        <div class="p-info-item">
+                            <a class="btn cart-add">加入购物车</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-wrap">
+                    <div class="detail-tab-con">
+                        <ul class="tab-list">
+                            <li class="tab-item active">详细描述</li>
+                        </ul>
+                    </div>
+                    <div class="detail-con">
+                        苹果公司超强手机，你值得拥有
+                        <img src="https://img.alicdn.com/imgextra/i1/2083604721/TB2qSjcjrGYBuNjy0FoXXciBFXa_!!2083604721.jpg" alt="配置" class="detail">
+                        <img src="https://img.alicdn.com/imgextra/i1/2083604721/TB2j5qJjpuWBuNjSspnXXX1NVXa_!!2083604721.jpg" alt="配置" class="detail">
+                        <div class="pricetips">
+                            <p class="tips">价格说明</p>
+                            <p class="tips-con">
+                                该价格指商品的<span class="bold">实时标价</span>，不因表述的差异改变性质。具体成交价格根据商品参加活动，或会员使用优惠券、积分等发生变化，最终以订单结算页价格为准。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="err-tip">
+                很抱歉，没有找到您要的商品。
+            </div>
+        </div>
+        <%= require('html-loader!./layout/foot-co.html')  %>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+.nav-s{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ddd;
+    background: #fff
+}
+.nav-s .logo{
+    font-size: 26px;
+    font-weight: normal;
+    color:#1c6db8;
+    text-decoration: none;
+} 

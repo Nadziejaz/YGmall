@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-co.html')  %>
+		<title><%=htmlWebpackPlugin.options.title%> - 尧哥电商平台，YGmall</title>
+	</head>
+<body>
+<%= require('html-loader!./layout/nav-s.html')  %>	
+<div class="wrap w">
+	<div class="result-con default-success">
+		<h1 class="result-tltle">恭喜您，操作成功！</h1>
+		<div class="result-content">
+			<a href="./index.html" class="link result-link">返回首页</a>
+			<a href="./login.html" class="link result-link">去登陆</a>
+		</div>
+	</div>
+	<div class="result-con reg-success">
+		<h1 class="result-tltle">恭喜您，注册成功！</h1>
+			<div class="result-content">
+					<a href="./index.html" class="link result-link">返回首页</a>
+					<a href="./login.html" class="link result-link">去登陆</a>
+			</div>
+	</div>
+	<div class="result-con pay-success">
+			<h1 class="result-tltle">恭喜您，支付成功！</h1>
+				<div class="result-content">
+					<a href="./index.html" class="link result-link">返回首页</a>
+				</div>
+		</div>
+</div>
+<%= require('html-loader!./layout/foot-co.html')  %>		   
+</body>
+</html>

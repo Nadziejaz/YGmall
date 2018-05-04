@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-co.html')  %>
+		<title><%=htmlWebpackPlugin.options.title%> - 尧哥电商平台，YGmall</title>
+	</head>
+<body>
+<%= require('html-loader!./layout/nav.html')  %>	
+<%= require('html-loader!./layout/header.html')  %>	
+<div class="crumb">
+    <div class="w">
+        <div class="crumb-con">
+            <a href="./index.html" class="link">YGmall>></a>
+            <span></span>
+            <span class="link-text"><%=htmlWebpackPlugin.options.title%></span>
+       </div>
+    </div>
+</div>
+<div class="wrap w">
+        <ul class="sort-con">
+            <li class="sort-item active" data-type="default">默认排序</li>
+            <li class="sort-item" data-type="price">
+                <span>价格</span>
+                <i class="fa fa-sort-asc"></i>
+                <i class="fa fa-sort-desc"></i>
+            </li>
+        </ul>
+        <!-- list 容器 -->
+        <div class="have-wrap">
+        <ul class="p-list-con">
+            <li class="p-item">
+                <div class="p-img-con">
+                    <a class="link" href="./detail.html?productId=100001" target="_blank">
+                        <img class="p-img" src="<%=require('../image/floor/floor2-2.jpg')%>" alt="..." />
+                    </a>
+                </div>
+                <div class="p-price-con">
+                    <span class="p-price">￥7560</span>
+                </div>
+                <div class="p-name-con">
+                    <a class="p-name" href="./detail.html?productId=100001" target="_blank">IPhone7</a>
+                </div>
+            </li>
+        </ul> 
+        </div>
+        <p class="err-tip">
+            很抱歉，没有相关商品
+        </p>
+            <!-- 分页容器 -->
+    <div class="pagination"></div>
+</div>
+<%= require('html-loader!./layout/foot-co.html')  %>		   
+</body>
+</html>

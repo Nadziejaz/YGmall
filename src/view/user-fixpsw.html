@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-co.html')  %>
+		<title>忘记密码 - 尧哥电商平台，YGmall</title>
+	</head>
+<body>
+<%= require('html-loader!./layout/nav-s.html')  %>	
+<div class="wrap">
+	<div class="w">
+		<div class="user-con">
+			<div class="user-title">忘记密码</div>
+				<div class="user-box">
+					<div class="error-item">
+						<i class="fa fa-minus-circle error-icon"></i>
+						<p class="err-msg">Error</p>
+					</div>
+					<div class="step-con step-username">
+						<a class="user-item-text">请输入你想找回的用户名：</a>
+						<div class="user-item">
+							<label class="user-label" for="username">
+								<i class="fa fa-user"></i>
+							</label>
+							<input class="user-content" id="username" placeholder="请输入用户名" autocomplete="off">
+						</div>
+						<a class="btn btn-submit" id="username-submit">下一步</a>
+					</div>
+					<div class="step-con step-QA">
+						<a class="user-item-text">请输入密码提示问题:<span class="question"></span>的答案：</a>
+						<div class="user-item">
+							<label class="user-label" for="answer">
+								<i class="fa fa-key"></i>
+							</label>
+							<input class="user-content" id="answer" placeholder="请输入密码提示问题答案" autocomplete="off">
+						</div>
+						<a class="btn btn-submit" id="answer-submit">下一步</a>
+					</div>
+					<div class="step-con step-fixpsw">
+						<a class="user-item-text">请输入你想使用的新密码：</a>
+						<div class="user-item">
+							<label class="user-label" for="password_new">
+								<i class="fa fa-lock"></i>
+							</label>
+							<input type="password" class="user-content" id="password_new" placeholder="请输入想使用的新密码" autocomplete="off">
+						</div>
+						<a class="btn btn-submit" id="password-submit">下一步</a>
+					</div>
+					<div class="link-item">
+						<a href="./login.html" target="_blank" class="link">我想起密码了，去登陆>></a>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+<%= require('html-loader!./layout/foot-co.html')  %>		   
+</body>
+</html>
